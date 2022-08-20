@@ -1,0 +1,68 @@
+CREATE TABLE staff(
+    StaffID int PRIMARY key,
+    fname varchar(10),
+    mname varchar(10),
+    lname varchar(10),
+    CityName varchar(10),
+    RoadNo varchar(10),
+    HouseNo int,
+    PhoneNo int,
+    Position varchar(10) NOT NULL,
+    ManagerID int NOT NULL,
+    Email varchar(50),
+    salary float(9,3) NOT NULL,
+    JoinDate DATE NOT NULL  
+);
+
+CREATE TABLE Manager(
+    ManagerID int PRIMARY key,
+    fname varchar(10),
+    mname varchar(10),
+    lname varchar(10),
+    CityName varchar(10),
+    RoadNo varchar(10),
+    HouseNo int,
+    PhoneNo int,
+    Position varchar(10) NOT NULL,
+    Email varchar(50),
+    salary float(9,3) NOT NULL,
+    JoinDate DATE NOT NULL  
+);
+
+CREATE TABLE Seller(
+    SellerID int PRIMARY key,
+    fname varchar(10),
+    mname varchar(10),
+    lname varchar(10),
+    CityName varchar(10),
+    RoadNo varchar(10),
+    HouseNo int,
+    PhoneNo int,
+    Position varchar(10) NOT NULL,
+    Email varchar(50),
+    salary float(9,3) NOT NULL,
+    JoinDate DATE NOT NULL  
+);
+CREATE TABLE Doctor(
+    DoctorID int PRIMARY key,
+    fname varchar(10),
+    mname varchar(10),
+    lname varchar(10),
+    CityName varchar(10),
+    RoadNo varchar(10),
+    HouseNo int,
+    PhoneNo int,
+    Email varchar(50),
+    salary float(9,3) NOT NULL,
+    JoinDate DATE NOT NULL,
+    details varchar(200)
+    
+);
+
+CREATE TABLE Treatment(
+    DoctorID int PRIMARY key,
+    AnimalID int PRIMARY key,
+    DiseaseID int NOT NULL,
+    TreatementDate DATE NOT NULL,
+    Prescriotion varchar(200)  
+);
